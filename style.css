@@ -1,0 +1,68 @@
+:root {
+  --menu-btn-color:white;
+  --menu-btn-siz:50px;
+  --menu-btn-div-color:black;
+}
+
+body {
+  position: relative;
+}
+
+.menu > .btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  margin: 10px;
+  position: fixed;
+  right: 0px;
+  width: var(--menu-btn-siz);
+  height: var(--menu-btn-siz);
+
+  /* border: 3px solid black; */
+  background-color: var(--menu-btn-color);
+  border-radius: 10px;
+}
+
+.menu > .btn > div{
+  display: block;
+  background-color: var(--menu-btn-div-color);
+  width: 32px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.menu > .btn.active {
+  gap: 0px;
+}
+
+.menu > .btn > :nth-child(1).active{
+  position: absolute;
+  transform: rotate(45deg);
+}
+.menu > .btn > :nth-child(2).active{
+  display: none;
+}
+.menu > .btn > :nth-child(3).active{
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+.menu > .content {
+  position: fixed;
+  right: 0px;
+  width: 0px;
+  height: 100vh;
+  background-color: darkturquoise;
+}
+
+.menu > .content.active {
+  width: 300px;
+}
+
+.menu > .content > .title {
+  margin: 10px;
+  font-size: 50px;
+}

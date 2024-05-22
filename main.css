@@ -1,0 +1,16 @@
+body {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.content {
+  top:100px;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 60px;
+}
